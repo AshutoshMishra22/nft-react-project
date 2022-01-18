@@ -4,6 +4,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import { TransactionContext } from "../context/TransactionContext";
 import { Loader } from "./";
+import { shortenAddress } from "./../utils/shortenAddress";
 
 const commonStyles =
   "min-h-[70px] sm:px-0 px-2 flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
@@ -15,7 +16,9 @@ const Input = ({ placeholder, type, name, value, handleChange }) => (
     value={value}
     onChange={(e) => handleChange(e, name)}
     step='0.0001'
-    className='my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism'
+    className={`my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism ${
+      type === "number" ? "appearance-none" : ""
+    }`}
   />
 );
 const Welcome = () => {
@@ -24,7 +27,7 @@ const Welcome = () => {
     currentAccount,
     handleChange,
     formData,
-    setFormData,
+    isLoading,
     sendTransaction,
   } = useContext(TransactionContext);
   function handleSubmit(e) {
@@ -73,7 +76,9 @@ const Welcome = () => {
                 <BsInfoCircle fontSize={17} color='#fff' />
               </div>
               <div>
-                <p className='text-white font-light text-sm'>Address</p>
+                <p className='text-white font-light text-sm'>
+                  {shortenAddress(currentAccount)}
+                </p>
                 <p className='text-white font-light text-lg mt-1'>Ethereum</p>
               </div>
             </div>
@@ -105,7 +110,7 @@ const Welcome = () => {
               handleChange={handleChange}
             />
             <div className='h-[1px] w-full bg-gray-400 my-2'></div>
-            {false ? (
+            {isLoading ? (
               <Loader />
             ) : (
               <button
