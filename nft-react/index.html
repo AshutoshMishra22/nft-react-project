@@ -2,12 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/foxLogo.png" />
+    <link rel="icon" href="/src/icons/favicon.ico" />
+    <link rel="icon" href="/src/icons/favicon.ico" sizes="" />
+    <link
+      rel="icon"
+      href="/src/icons/android-chrome-144x144.png"
+      sizes="144x144"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="/src/icons/apple-touch-icon.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Web Site for Etherium Transactions using Metamask"
+    />
+    <link rel="shortcut icon" href="/src/icons/favicon.ico" />
+    <link rel="mask-icon" href="/src/icons/maskable.png" color="#FFFFFF" />
+    <link rel="manifest" href="manifest.json" />
     <title>KRYPT</title>
   </head>
   <body>
-    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <div id="root"></div>
+    <!-- <script>
+      let swURL = `/sw.js`;
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register(swURL)
+            .then(
+              function (registration) {
+                console.log(
+                  "worker registration is successfull.\n",
+                  registration.scope
+                );
+              },
+              function (err) {
+                console.log("registration failed \n", err);
+              }
+            )
+            .catch(function (err) {
+              console.log("Failed to apply ", err);
+            });
+        });
+      } else {
+        console.log(" Service worker is not supported in your browser.");
+      }
+    </script> -->
   </body>
 </html>

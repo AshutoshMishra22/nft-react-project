@@ -106,11 +106,13 @@ const Navbar = () => {
       </div>
       {toggleLogin && (
         <div className='fixed blue-glassmorphism z-20 w-[100%] h-[100%] bottom-0'>
-          <div className='text-xl w-full m-6 text-white cursor-pointer'>
-            <AiOutlineClose onClick={() => updateState("toggleLogin", false)} />
-          </div>
           <div className='text-white animate-scale-up-center grid place-items-center relative h-[80%] w-[100%]'>
             <div className='p-5 flex flex-col justify-evenly items-center gradient-bg-login rounded-lg'>
+              <div className='text-xl w-full mx-6 my-2 text-white cursor-pointer'>
+                <AiOutlineClose
+                  onClick={() => updateState("toggleLogin", false)}
+                />
+              </div>
               <div className='w-full mt-5 mx-8px'>
                 <Input
                   placeholder='Email'
