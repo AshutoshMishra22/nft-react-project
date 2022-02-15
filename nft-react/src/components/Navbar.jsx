@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-
+import { useSelector, useDispatch } from "react-redux";
+import { loginSuccess } from "../redux/action";
+import loginSelector from "../redux/selector";
 import logo from "../icons/logo.png";
 
 const Input = ({
@@ -29,6 +31,8 @@ const NavbarItem = ({ title, classProps }) => {
   return <li className={`mx-4 cursor-pointer ${classProps}`}>{title}</li>;
 };
 const Navbar = () => {
+  const count = useSelector(loginSelector);
+  const dispatch = useDispatch();
   const [state, setState] = useState({
     toggleMenu: false,
     toggleLogin: false,
@@ -129,7 +133,10 @@ const Navbar = () => {
               </div>
               <button
                 type='button'
-                onClick={() => updateState("loginTry", true)}
+                onClick={() => {
+                  updateState("loginTry", true);
+                  dispatch(loginSuccess({ name: "Siyaram" }));
+                }}
                 className={`text-white w-full my-8 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer ${
                   loginTry ? "animate-bg-pan-right" : ""
                 }`}

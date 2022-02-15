@@ -5,12 +5,12 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "http://localhost:5000/",
-  "scope": "http://localhost:5000/",
+  "start_url": "https://punkblock.netlify.app/",
+  "scope": "https://punkblock.netlify.app/",
   "id": "krypt",
   "icons": [
     {
-      "src": "/src/icons/favicon.ico",
+      "src": "/assets/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
@@ -27,23 +27,23 @@
       "purpose": "maskable"
     },
     {
-      "src": "/src/icons/android-chrome-144x144.png",
+      "src": "/assets/logo144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/src/icons/android-chrome-512x512.png",
+      "src": "/assets/androidchrome512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/src/icons/android-chrome-512x512.png",
+      "src": "/assets/androidchrome512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/src/icons/android-chrome-192x192.png",
+      "src": "/assets/androidchrome192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }

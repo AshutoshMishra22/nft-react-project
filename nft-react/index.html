@@ -3,11 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/src/icons/favicon.ico" />
-    <link rel="icon" href="/src/icons/favicon.ico" sizes="" />
     <link
       rel="icon"
-      href="/src/icons/android-chrome-144x144.png"
+      type="image/x-icon"
+      href="/src/icons/favicon.ico"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/icons/logo144.png"
       sizes="144x144"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/icons/androidchrome512x512.png"
+      sizes="512x512"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/icons/androidchrome192x192.png"
+      sizes="192x192"
     />
     <link
       rel="apple-touch-icon"
@@ -28,7 +46,7 @@
   <body>
     <script type="module" src="/src/main.jsx"></script>
     <div id="root"></div>
-    <!-- <script>
+    <script>
       let swURL = `/sw.js`;
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
@@ -52,6 +70,6 @@
       } else {
         console.log(" Service worker is not supported in your browser.");
       }
-    </script> -->
+    </script>
   </body>
 </html>
