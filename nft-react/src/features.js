@@ -7,8 +7,7 @@ async function getContacts() {
   if (supported) {
     const contacts = await navigator.contacts.select(props, opts);
     alert("Contacts Added ", contacts);
-  }
-  alert("failed to load Contacts ");
+  } else alert("failed to load Contacts ");
 }
 var allowGeoRecall = true;
 async function getGeoLocation() {
