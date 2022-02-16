@@ -9,10 +9,30 @@ async function getContacts() {
     alert(contacts);
   }
 }
-
+var allowGeoRecall = true;
 async function getGeoLocation() {
-  console.log("accessing geolocation");
-  window.navigator.geolocation.getCurrentPosition(console.log);
+  console.log("getGeoLocation was called");
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, positionError);
+  } else {
+    console.log("Geolocation is not supported by this device");
+  }
+}
+
+function positionError() {
+  console.log("Geolocation is not enabled. Please enable to use this feature");
+
+  if (allowGeoRecall) {
+    getGeoLocation();
+  }
+}
+
+function showPosition() {
+  console.log("posititon accepted");
+  allowGeoRecall = false;
+  const watchID = navigator.geolocation.watchPosition((position) => {
+    // alert(position.coords.latitude, position.coords.longitude);
+  });
 }
 
 async function detectMotion() {
