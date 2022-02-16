@@ -5,6 +5,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { loginSuccess } from "../redux/action";
 import loginSelector from "../redux/selector";
 import logo from "../icons/logo.png";
+import {
+  detectMotion,
+  getContacts,
+  getGeoLocation,
+  shareApp,
+} from "./../features";
 
 const Input = ({
   placeholder,
@@ -105,9 +111,42 @@ const Navbar = () => {
             >
               Login
             </li>
+            <li
+              className='my-2 text-lg mx-4 cursor-pointer'
+              onClick={() => {
+                getContacts();
+              }}
+            >
+              Contacts
+            </li>
+            <li
+              className='my-2 text-lg mx-4 cursor-pointer'
+              onClick={() => {
+                getGeoLocation();
+              }}
+            >
+              Location
+            </li>
+            <li
+              className='my-2 text-lg mx-4 cursor-pointer'
+              onClick={() => {
+                detectMotion();
+              }}
+            >
+              Motion
+            </li>
+            <li
+              className='my-2 text-lg mx-4 cursor-pointer'
+              onClick={() => {
+                shareApp();
+              }}
+            >
+              Share
+            </li>
           </ul>
         )}
       </div>
+      {/* Login */}
       {toggleLogin && (
         <div className='fixed blue-glassmorphism z-20 w-[100%] h-[100%] bottom-0'>
           <div className='text-white animate-scale-up-center grid place-items-center relative h-[80%] w-[100%]'>
