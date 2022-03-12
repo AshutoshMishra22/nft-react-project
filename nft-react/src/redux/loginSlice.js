@@ -1,7 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { loginSuccess } from "./action";
+import { createSlice, createAsyncThunk, createReducer } from "@reduxjs/toolkit";
+import { loginAction } from "./action";
 const initialState = {
-  userDetails: { name: "Ram", status: "idle" },
+  isLoading: false,
+  userDetails: { name: "", status: "" },
 };
 const loginProcessing = {
   // loginSuccess: (state, { type, payload }) => {
@@ -16,16 +17,32 @@ const loginProcessing = {
   ),
 };
 
+// const loginReducer = createReducer(initialState, (builder) => {
+//   builder.addCase(loginAction.fulfilled, (state, action) => {
+//     state.isLoading = true;
+//     state.userDetails = action.payload;
+//   });
+// });
 export const loginSlice = createSlice({
   name: "loginReducer",
   initialState,
-  reducers: loginProcessing,
+  reducers: {
+    compLoading: (state) => {
+      state.isLoading = !state.isLoading;
+    },
+  },
   extraReducers(builder) {
-    builder.addCase(loginSuccess.pending, (state, action) => {
-      state.userDetails.status = "loading";
-      state.userDetails.extra = builder;
+    builder.addCase(loginAction.pending, (state) => {
+      state.userDetails = initialState.userDetails;
+    });
+    builder.addCase(loginAction.fulfilled, (state, action) => {
+      state.userDetails = action.payload;
+    });
+    builder.addCase(loginAction.rejected, (state, action) => {
+      state.userDetails = action.payload;
     });
   },
 });
 
+export const { compLoading } = loginSlice.actions;
 export default loginSlice.reducer;
