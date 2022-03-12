@@ -20,7 +20,7 @@ export default configureStore({
     loginReducer,
   },
   // middleware: [exampleMiddleware, loggerMiddleware],
-  // devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== "production",
   // preloadedState : {},
   // enhancers: [reduxBatch]
 });

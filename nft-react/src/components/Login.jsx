@@ -94,7 +94,7 @@ const Login = ({ setToggle }) => {
             />
           </div>
           <p
-            className={` ${
+            className={`h-5 ${
               email && securityKey ? errorColorCls : warningColorCls
             }`}
           >
