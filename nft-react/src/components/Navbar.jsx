@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import logo from "../icons/logo.png";
+import logo from "../icons/Krypt-logos_transparent.png";
 import {
   detectMotion,
   getContacts,
@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className='w-full flex md:justify-center justify-between items-center p-4'>
       <div className='md:flex-[0.5] flex-initial justify-center item-center'>
-        <img src={logo} alt='logo' />
+        <img src={logo} alt='logo' className=' w-[344px]' />
       </div>
       <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-intial'>
         {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (

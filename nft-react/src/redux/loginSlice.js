@@ -4,25 +4,7 @@ const initialState = {
   isLoading: false,
   userDetails: { name: "", status: "" },
 };
-const loginProcessing = {
-  // loginSuccess: (state, { type, payload }) => {
-  //   state.userDetails = { ...state.userDetails, ...payload };
-  // },
-  loginSuccess: createAsyncThunk(
-    "loginReducer/loginSuccess",
-    async (payload) => {
-      console.log("payload ", payload);
-      return payload;
-    }
-  ),
-};
 
-// const loginReducer = createReducer(initialState, (builder) => {
-//   builder.addCase(loginAction.fulfilled, (state, action) => {
-//     state.isLoading = true;
-//     state.userDetails = action.payload;
-//   });
-// });
 export const loginSlice = createSlice({
   name: "loginReducer",
   initialState,
