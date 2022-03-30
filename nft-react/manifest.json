@@ -5,8 +5,8 @@
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
-  "start_url": "https://punkblock.netlify.app/",
-  "scope": "https://punkblock.netlify.app/",
+  "start_url": "http://localhost:3000/",
+  "scope": "http://localhost:3000/",
   "id": "krypt",
   "icons": [
     {
@@ -26,11 +26,6 @@
       "purpose": "maskable"
     },
     {
-      "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/apple-touch-icon_ymPQ-pl6F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648649329002",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
       "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/android-chrome-192x192_5chflqy0N.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648649328520",
       "sizes": "192x192",
       "type": "image/png",
@@ -44,14 +39,14 @@
   ],
   "shortcuts": [
     {
-      "name": "Etherium Transaction",
-      "short_name": "Transaction",
-      "description": "Send Etherium",
-      "url": "/",
+      "name": "Eth Transfer",
+      "short_name": "Send Eth",
+      "description": "Send Etherium to metamask wallet",
+      "url": "https://punkblock.netlify.app/",
       "icons": [
         {
-          "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/android-chrome-144x144_EQ_OPrm51.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648650726625",
-          "sizes": "144x144"
+          "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/krypt_icon_96x96_sgboypiKh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648653204372",
+          "sizes": "96x96"
         }
       ]
     }
