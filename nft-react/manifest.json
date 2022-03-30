@@ -15,7 +15,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "https://ik.imagekit.io/jo9qfzjsoxo/logo144_LW0QqI5Wb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644945610578",
+      "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/android-chrome-512x512_01ARvzpmY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648649328704",
       "sizes": "144x144",
       "type": "image/png"
     },
@@ -44,8 +44,8 @@
       "url": "/",
       "icons": [
         {
-          "src": "https://ik.imagekit.io/jo9qfzjsoxo/logo144_LW0QqI5Wb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1644945610578",
-          "sizes": "144x144"
+          "src": "https://ik.imagekit.io/jo9qfzjsoxo/Favicon/android-chrome-192x192_5chflqy0N.png?ik-sdk-version=javascript-1.4.3&updatedAt=1648649328520",
+          "sizes": "192x192"
         }
       ]
     }
